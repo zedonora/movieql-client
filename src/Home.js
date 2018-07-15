@@ -1,3 +1,5 @@
 import React from "react";
-const Home = () => <div>Home</div>;
+import Query from "react-apollo";
+import {HOME_PAGE} from "./queries"
+const Home = () => <Query query={HOME_PAGE}>Home</Query>;
 export default Home;
