@@ -7,9 +7,13 @@ const Home = () => (
             if(loading) return "loading";
             if(error) return "something happened";
             return data.movies.map(movie=>(
-                <h2 key={movie.id}>
-                    {movie.title} / {movie.rating}
-                </h2>
+                <Movie
+                    id={movie.id}
+                    key={movie.id}
+                    poster={movie.medium_cover_image}
+                    title={movie.title}
+                    rating={movie.rating}
+                />
             ));
         }}
     </Query>
